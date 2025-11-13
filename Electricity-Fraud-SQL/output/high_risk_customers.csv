@@ -1,0 +1,13 @@
+﻿customer_id,name,city,meter_type,fraud_score,risk_level
+16,Tamper Singh,Delhi,residential,100,CRITICAL
+16,Tamper Singh,Delhi,residential,100,CRITICAL
+16,Tamper Singh,Delhi,residential,100,CRITICAL
+16,Tamper Singh,Delhi,residential,100,CRITICAL
+11,Suspicious Co Ltd,Mumbai,industrial,95,CRITICAL
+11,Suspicious Co Ltd,Mumbai,industrial,95,CRITICAL
+11,Suspicious Co Ltd,Mumbai,industrial,95,CRITICAL
+16,Tamper Singh,Delhi,residential,95,CRITICAL
+16,Tamper Singh,Delhi,residential,95,CRITICAL
+16,Tamper Singh,Delhi,residential,95,CRITICAL
+16,Tamper Singh,Delhi,residential,95,CRITICAL
+11,Suspicious Co Ltd,Mumbai,industrial,90,CRITICAL

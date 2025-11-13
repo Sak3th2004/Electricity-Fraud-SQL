@@ -1,0 +1,52 @@
+# Update the ER diagram file with proper syntax
+@"
+erDiagram
+    CUSTOMERS {
+        int customer_id PK
+        varchar name
+        varchar address
+        varchar city
+        enum meter_type
+        date connection_date
+        varchar phone
+        varchar email
+    }
+    
+    CONSUMPTION {
+        int record_id PK
+        int customer_id FK
+        date reading_month
+        decimal units_consumed
+        decimal previous_units
+        decimal bill_amount
+        datetime reading_timestamp
+        varchar meter_reader_id
+        enum reading_status
+    }
+    
+    LOCALITY_AVERAGE {
+        int locality_id PK
+        varchar city
+        decimal avg_monthly_units
+        decimal peak_season_units
+        decimal off_peak_units
+        int total_customers
+        date last_updated
+    }
+    
+    FRAUD_FLAGS {
+        int fraud_id PK
+        int customer_id FK
+        varchar reason
+        date month
+        enum severity
+        decimal anomaly_score
+        date flag_date
+        varchar detected_by
+        enum status
+    }
+    
+    CUSTOMERS ||--o{ CONSUMPTION : "has readings"
+    CUSTOMERS ||--o{ FRAUD_FLAGS : "may have flags"
+    CONSUMPTION }o--|| LOCALITY_AVERAGE : "compared with"
+"@ | Out-File -FilePath "diagrams/er_diagram.mmd" -Encoding UTF8 -Force

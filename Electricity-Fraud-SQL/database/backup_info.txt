@@ -1,0 +1,16 @@
+﻿DATABASE BACKUP INFORMATION
+==========================
+Database: electricity_fraud_db
+MySQL Version: 9.2.0
+Tables: 5 (customers, consumption, fraud_flags, locality_average, fraud_risk_dashboard)
+Records: 60 consumption records, 20 customers
+Created: 2025-11-13 12:28:45
+
+To restore this database:
+1. Run: mysql -u root
+2. Execute: SOURCE sql/fraud_detection.sql;
+3. Execute: SOURCE sql/sample_data.sql;
+4. Execute: SOURCE sql/advanced_fraud_queries.sql;
+5. Execute: SOURCE sql/views_and_procedures.sql;
+
+All SQL files are included in the sql/ directory.
