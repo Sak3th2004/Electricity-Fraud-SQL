@@ -1,5 +1,3 @@
-# Update the ER diagram file with proper syntax
-@"
 erDiagram
     CUSTOMERS {
         int customer_id PK
@@ -49,4 +47,3 @@ erDiagram
     CUSTOMERS ||--o{ CONSUMPTION : "has readings"
     CUSTOMERS ||--o{ FRAUD_FLAGS : "may have flags"
     CONSUMPTION }o--|| LOCALITY_AVERAGE : "compared with"
-"@ | Out-File -FilePath "diagrams/er_diagram.mmd" -Encoding UTF8 -Force
